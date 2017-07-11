@@ -1,0 +1,35 @@
+body {
+  background-color: gray;
+  text-align: center;
+  font-family: monospace;
+}
+h1 {
+  color: white;
+  font-size: 100;
+  font-style: italic;
+  border-style: double;
+}
+
+#me {
+  align-content: center;
+}
+#hello {
+  display: inline-block;
+}
+.boo {
+  margin: auto;
+  border-style: ridge;
+  border-spacing: inherit;
+}
+#entry {
+  border-style: dotted;
+  padding: 10px;
+  text-align: left;
+}
+#title {
+  text-decoration: underline;
+}
+
+#personal {
+  text-align: left;
+}
