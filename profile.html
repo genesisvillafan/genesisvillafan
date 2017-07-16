@@ -2,29 +2,102 @@
 <html>
     <head>
           <title>Profile Page</title>
-          <link rel="stylesheet" href="stylesheet.css">
+          <link rel="stylesheet" href="stylesheet.css"></link>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="my_script.js"></script>
     </head>
     <body>
-        <h1>Genesis Villafan</h1>
-        <p>
-          <h4><a href="index.html">Home</a></h4>
-        <h4><a href="blogging.html">Blog</a></h4>
-        </p>
-        <img class="boo" src="smile.png" height="300" width="300">
-        <img class="boo" src="smiley.png" height="300" width="300">
-        <h3>About Me:</h3>
-        <p id="me">I am eighteen years old.
-        I live in South Gate,California. I am left handed.
-        I love to read books. I love technology. I am a fan of going
-      to concerts.This girl hopes to one day work in Google.</p>
-        <h3>University</h3>
-        <p>University of California, Irvine</p>
-        <h3><a href=http://twitter.com/dearestgenesis>Twitter<a>
-        <h3> My Favorite Movies</h3>
-          <ul id="hello">
-            <li>La La Land</li>
-            <li>Lilo And Stitch</li>
-            <li>Can't Think of Another</li>
+        <div id="header">
+          <h1 id="title">Genesis Villafan</h1>
+          <p>
+            <h3><a href="index.html">Home</a> /
+            <a href="blogging.html">Blog</a></h3>
+          </p>
+        </div>
+        <img class="boo" src="me.jpg" height="300px" width="300px">
+        <img class="boo" src="friends.jpg" height="300px" width="300px">
+        <img class="boo" src="graduate.jpg" height="300px" width="300px">
+        <img class="boo" src="disney.jpg" height="300px" width="300px">
+      <div id="main">
+          <div class="info" id="larger">
+            <h3 class="beginning">Stats</h3>
+            <p>
+                <ul id="member">
+                    <li><strong>Birthday:</strong> January 6, 1999</li>
+                    <li><strong>Current Residence:</strong> South Gate,California</li>
+                    <li><strong>Nickname:</strong> Gen</li>
+                    <li><strong>Height:</strong> 5'3</li>
+                    <li><strong>Hair Color:</strong> Brown</li>
+                    <li><strong>Eye Color:</strong> Brown</li>
+                </ul>
+            </p>
+          </div>
+        <div class="info">
+          <h3 class="beginning">About Me:</h3>
+          <p id="me">On July 16, 1969, the Apollo 11 spacecraft launched from the Kennedy Space Center in Florida.
+            Its mission was to go where no human being had gone before—the moon! The crew consisted of Neil Armstrong,
+             Michael Collins, and Buzz Aldrin. The spacecraft landed on the moon in the Sea of Tranquility, a basaltic
+              flood plain, on July 20, 1969. The moonwalk took place the following day. On July 21, 1969, at precisely
+              10:56 EDT, Commander Neil Armstrong emerged from the Lunar Module and took his famous first step onto the moon’s
+              surface. He declared, “That’s one small step for man, one giant leap for mankind.” It was a monumental moment in
+              human history! It was July 21, 1969, and Neil Armstrong awoke with a start. It was the day he would become the first human
+              being to ever walK on the moon. The journey had begun several days earlier, when on July 16th, the Apollo 11
+              launched from Earth headed into outer space. On board with Neil Armstrong were Michael Collins and Buzz Aldrin.
+          </p>
+          </div>
+    </div>
+    <div id="footer">
+        <div id="firstbox">
+        <h3 class="beginning">University</h3>
+        <p class="sizing">University of California, Irvine</p>
+        <h3 class="beginning">Contact</h3>
+        <h3><a href=http://twitter.com/dearestgenesis>Twitter</a>
+        <h3 class="beginning">Work</h3>
+          <ul class="hello" class="sizing">
+            <li>Full Time Student</li>
+            <li>Google CSSI LA</li>
+            <li>Starbucks Barista</li>
           </ul>
+        </div>
+        <div id="secondbox">
+        <h3 class="beginning">Quote</h3>
+        <p class="sizing">“We accept the love we think we deserve.”<br>
+           - Steven Chbosky
+        </p>
+        <h3 class="beginning">Music</h3>
+        <audio controls>
+          <source src="shawn.mp3" type="audio/mpeg">
+        </audio>
+        <h3 class="beginning">Hobbies</h3>
+          <ul class="hello" class="sizing">
+            <li>Basketball</li>
+            <li>Programming</li>
+            <li>Photography</li>
+          </ul>
+        </div>
+          <div id="map" style="width:400px;height:400px"></div>
+          <script>
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 33.993, lng: -118.480},
+                zoom: 8
+              });
+              var marker = new google.maps.Marker({
+                position: {lat: 33.993, lng: -118.480},
+                map: map
+              });
+            }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv2P4MSVgkDjhbY67MPacnB9HdqsHCTP8&callback=initMap"
+          async defer></script>
+          <br>
+        </div>
+        <br>
+        <div>
+          <textarea id="name_box"></textarea>
+          <button id="button_ok">"OK"</button>
+          <div id="text_display"></div>
+        </div>
     </body>
 </html>
