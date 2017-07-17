@@ -30,16 +30,18 @@ a{
   margin: auto;
   padding: 5px;
   border-style: ridge;
-  border-spacing: inherit;
+  border-spacing: inherit
 
 }
-#entry {
-  border-style: dotted;
-  padding: 10px;
+.entry {
+  border-style: outset;
+  border-left: 15px solid #ABBDFF;
+  background-color: white;
+  padding: 15px;
+}
+.entry_titles{
   text-align: left;
 }
-
-
 #personal {
   text-align: left;
 }
